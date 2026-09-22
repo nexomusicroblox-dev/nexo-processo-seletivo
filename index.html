@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NEXO • Processo Seletivo</title>
+<style>
+:root{--bg:#071126;--card:#0d1b3a;--card2:#111f43;--line:#26395f;--text:#f5f7ff;--muted:#9eaccb;--blue:#3b8cff;--purple:#7654ff;--danger:#ff5470}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 0%,#164eaa 0,transparent 35%),radial-gradient(circle at 90% 10%,#6b1ba8 0,transparent 32%),var(--bg);min-height:100vh}.wrap{max-width:980px;margin:auto;padding:28px 16px 60px}.brand{text-align:center;margin:8px 0 24px}.brand h1{font-size:38px;letter-spacing:5px;margin:0}.brand p{color:var(--muted);margin:8px 0}.card{background:#0b1735f2;border:1px solid #ffffff12;border-radius:24px;overflow:hidden;box-shadow:0 25px 80px #0007}.tabs{display:flex;gap:4px;overflow:auto;padding:8px;background:#09132c;border-bottom:1px solid var(--line)}.tab{border:0;background:transparent;color:var(--muted);padding:13px 15px;border-radius:12px;white-space:nowrap;font-weight:700;cursor:pointer}.tab.active{background:linear-gradient(90deg,var(--blue),var(--purple));color:#fff}.content{padding:30px}.panel{display:none}.panel.active{display:block}.title{margin:0 0 6px;font-size:26px}.sub{margin:0 0 24px;color:var(--muted);line-height:1.5}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{margin-bottom:18px}.field.full{grid-column:1/-1}.field label{display:block;font-weight:700;margin-bottom:8px}.req{color:#ff6f8a}.input,textarea{width:100%;border:1px solid var(--line);background:var(--card2);color:#fff;border-radius:12px;padding:13px 14px;font-size:15px;outline:none}.input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #3b8cff22}textarea{min-height:115px;resize:vertical}.option{display:flex;gap:10px;align-items:flex-start;padding:13px;border:1px solid var(--line);background:var(--card2);border-radius:12px;margin:9px 0;cursor:pointer}.option input{margin-top:3px;accent-color:var(--blue)}.box{padding:17px;border:1px solid var(--line);background:#101e40;border-radius:14px;margin-bottom:18px}.box h3{margin:0 0 9px}.box ul{margin:0;padding-left:20px;line-height:1.75;color:#d8e0f4}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:28px}.btn{border:0;border-radius:12px;padding:13px 20px;font-weight:800;cursor:pointer}.back{background:#223254;color:#fff}.next,.submit{background:linear-gradient(90deg,var(--blue),var(--purple));color:#fff}.submit{width:100%;font-size:16px}.status{display:none;margin-top:18px;padding:15px;border-radius:12px;background:#123a2a;border:1px solid #1e8b61;color:#caffea}.note{font-size:13px;color:var(--muted);line-height:1.5}.success{text-align:center;padding:30px}.success .icon{font-size:50px}.admin-link{display:block;text-align:center;margin-top:15px;color:#9fb8ee;text-decoration:none;font-size:13px}@media(max-width:700px){.grid{grid-template-columns:1fr}.content{padding:20px}.brand h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="brand"><h1>NEXO</h1><p>Processo Seletivo • Candidatura Oficial</p></header>
+<div class="card">
+<nav class="tabs" id="tabs">
+<button class="tab active">01 • Dados Pessoais</button>
+<button class="tab">02 • Responsabilidades</button>
+<button class="tab">03 • Requisitos</button>
+<button class="tab">04 • Áreas</button>
+<button class="tab">05 • Fechadas</button>
+<button class="tab">06 • Abertas</button>
+<button class="tab">07 • Confirmação</button>
+</nav>
+<form id="form">
+<div class="content">
+
+<section class="panel active">
+<h2 class="title">Dados pessoais</h2><p class="sub">Esta é a etapa principal da candidatura. Preencha todos os dados corretamente.</p>
+<div class="grid">
+<div class="field"><label>Nome (RP) <span class="req">*</span></label><input class="input" name="nomeRP" required></div>
+<div class="field"><label>Idade (vida real) <span class="req">*</span></label><input class="input" name="idade" type="number" min="1" max="120" required></div>
+<div class="field"><label>Email <span class="req">*</span></label><input class="input" name="email" type="email" required></div>
+<div class="field"><label>Instagram <span class="req">*</span></label><input class="input" name="instagram" placeholder="@usuario" required></div>
+<div class="field full"><label>Discord <span style="color:#9eaccb">(se tiver)</span></label><input class="input" name="discord" placeholder="usuario ou usuario#0000"></div>
+</div>
+<div class="actions"><span></span><button type="button" class="btn next" onclick="go(1)">Continuar →</button></div>
+</section>
+
+<section class="panel">
+<h2 class="title">Responsabilidades</h2><p class="sub">Leia atentamente antes de prosseguir.</p>
+<div class="box"><ul><li>Executar as atividades da função com responsabilidade.</li><li>Seguir regras e procedimentos internos da Nexo.</li><li>Manter postura profissional e respeitosa.</li><li>Cumprir horários e tarefas.</li><li>Colaborar com a equipe.</li><li>Comunicar problemas aos responsáveis.</li><li>Zelar pela organização e qualidade do trabalho.</li></ul></div>
+<label class="option"><input type="checkbox" name="leuResponsabilidades" required><span>Li e compreendi as responsabilidades apresentadas. <b class="req">*</b></span></label>
+<div class="actions"><button type="button" class="btn back" onclick="go(0)">← Voltar</button><button type="button" class="btn next" onclick="go(2)">Continuar →</button></div>
+</section>
+
+<section class="panel">
+<h2 class="title">Requisitos</h2><p class="sub">Confira se você atende aos requisitos antes de continuar.</p>
+<div class="box"><ul><li>Responsabilidade e comprometimento.</li><li>Boa comunicação e educação.</li><li>Capacidade de trabalhar em equipe.</li><li>Respeito às regras e à hierarquia.</li><li>Disponibilidade para horários definidos.</li><li>Disposição para aprender e receber orientações.</li></ul></div>
+<label class="option"><input type="checkbox" name="aceitaRequisitos" required><span>Li e estou de acordo com os requisitos apresentados. <b class="req">*</b></span></label>
+<div class="actions"><button type="button" class="btn back" onclick="go(1)">← Voltar</button><button type="button" class="btn next" onclick="go(3)">Continuar →</button></div>
+</section>
+
+<section class="panel">
+<h2 class="title">Seleção de áreas</h2><p class="sub">Escolha até 2 áreas de interesse.</p>
+<label class="option"><input type="checkbox" name="area" value="Atendimento">Atendimento</label>
+<label class="option"><input type="checkbox" name="area" value="Operacional">Operacional</label>
+<label class="option"><input type="checkbox" name="area" value="Administração">Administração</label>
+<label class="option"><input type="checkbox" name="area" value="Recursos Humanos">Recursos Humanos</label>
+<label class="option"><input type="checkbox" name="area" value="Marketing">Marketing</label>
+<label class="option"><input type="checkbox" name="area" value="Comunicação">Comunicação</label>
+<label class="option"><input type="checkbox" name="area" value="Eventos">Eventos</label>
+<label class="option"><input type="checkbox" name="area" value="Segurança">Segurança</label>
+<div class="field"><label>Outra área (opcional)</label><input class="input" name="outraArea"></div>
+<div class="actions"><button type="button" class="btn back" onclick="go(2)">← Voltar</button><button type="button" class="btn next" onclick="validateAreas()">Continuar →</button></div>
+</section>
+
+<section class="panel">
+<h2 class="title">Perguntas fechadas</h2><p class="sub">Todas as perguntas abaixo são obrigatórias.</p>
+<div id="closed"></div>
+<div class="actions"><button type="button" class="btn back" onclick="go(3)">← Voltar</button><button type="button" class="btn next" onclick="validateCurrent(5)">Continuar →</button></div>
+</section>
+
+<section class="panel">
+<h2 class="title">Perguntas abertas</h2><p class="sub">Responda com sinceridade e o máximo de clareza possível.</p>
+<div id="open"></div>
+<div class="actions"><button type="button" class="btn back" onclick="go(4)">← Voltar</button><button type="button" class="btn next" onclick="validateCurrent(6)">Continuar →</button></div>
+</section>
+
+<section class="panel">
+<h2 class="title">Confirmação e envio</h2><p class="sub">Revise seus dados antes de enviar.</p>
+<div class="box"><h3>Declaração</h3><p class="note">Declaro que as informações fornecidas são verdadeiras. Estou ciente de que o preenchimento deste formulário não garante aprovação e que a candidatura será analisada pela equipe responsável.</p></div>
+<label class="option"><input type="checkbox" name="declaracao" required><span>Li, concordo e quero enviar minha candidatura. <b class="req">*</b></span></label>
+<button class="btn submit" id="submitBtn" type="submit">ENVIAR CANDIDATURA</button>
+<div id="status" class="status"></div>
+</section>
+</div>
+</form>
+</div>
+<a class="admin-link" href="admin.html">Acesso administrativo</a>
+</div>
+<script>
+const API_URL="https://script.google.com/macros/s/AKfycbwgd8fmu50eWy-SGo4bZwacACxOz1jRYlNrZgnrOcBqT8SUQOeWe3GbLK42jqKQvmptLQ/exec";
+const panels=[...document.querySelectorAll(".panel")],tabs=[...document.querySelectorAll(".tab")];
+const closed=[
+["disponibilidade","Você possui disponibilidade para cumprir os horários estabelecidos?",["Sim","Não","Parcialmente"]],
+["equipe","Você possui experiência trabalhando em equipe?",["Sim","Não"]],
+["experiencia","Você já exerceu alguma função semelhante anteriormente?",["Sim","Não"]],
+["treinamento","Você está disposto(a) a receber orientações e treinamentos?",["Sim","Não"]],
+["reunioes","Você possui disponibilidade para reuniões ou treinamentos quando necessário?",["Sim","Não","Dependendo do horário"]],
+["postura","Você consegue manter uma postura profissional durante o trabalho?",["Sim","Não"]]
+];
+const opens=[
+["sobre","Fale um pouco sobre você."],["nexo","Por que você deseja trabalhar na Nexo?"],["selecao","Por que deveríamos selecionar você?"],["fortes","Quais são seus principais pontos fortes?"],["melhorar","Qual é um ponto que você acredita que precisa melhorar?"],["cliente","Como você lidaria com um cliente insatisfeito?"],["equipeProblema","Como você agiria caso um membro da equipe não estivesse cumprindo suas responsabilidades?"],["criticas","Como você costuma lidar com críticas ou orientações de superiores?"],["situacao","Conte uma situação em que você precisou trabalhar em equipe para resolver um problema."],["objetivos","O que você espera aprender ou conquistar dentro da Nexo?"]
+];
+document.getElementById("closed").innerHTML=closed.map((q,i)=>`<div class="field"><label>${i+1}. ${q[1]} <span class="req">*</span></label>${q[2].map(v=>`<label class="option"><input type="radio" name="${q[0]}" value="${v}" required>${v}</label>`).join("")}</div>`).join("");
+document.getElementById("open").innerHTML=opens.map((q,i)=>`<div class="field"><label>${i+1}. ${q[1]} <span class="req">*</span></label><textarea name="${q[0]}" required></textarea></div>`).join("");
+function go(i){panels.forEach((p,n)=>p.classList.toggle("active",n===i));tabs.forEach((t,n)=>t.classList.toggle("active",n===i));scrollTo({top:0,behavior:"smooth"})}
+function validateCurrent(next){const p=panels[next-1];const fields=[...p.querySelectorAll("input,textarea")];if(!fields.every(x=>x.checkValidity())){p.querySelector(":invalid").reportValidity();return}go(next)}
+function validateAreas(){const a=[...document.querySelectorAll('input[name="area"]:checked')];if(a.length>2){alert("Selecione no máximo 2 áreas.");return}if(a.length===0&&!document.querySelector('[name="outraArea"]').value.trim()){alert("Selecione pelo menos uma área.");return}go(4)}
+document.getElementById("form").addEventListener("submit",async e=>{
+e.preventDefault();const form=e.target;if(!form.checkValidity()){form.querySelector(":invalid").reportValidity();return}
+if(API_URL.startsWith("COLE_")){alert("O formulário está pronto, mas ainda falta conectar a URL do Google Apps Script. Veja o arquivo INSTRUCOES.txt.");return}
+const data=Object.fromEntries(new FormData(form).entries());data.areas=[...document.querySelectorAll('input[name="area"]:checked')].map(x=>x.value);data.outraArea=(data.outraArea||"").trim();data.timestamp=new Date().toISOString();
+const btn=document.getElementById("submitBtn"),st=document.getElementById("status");btn.disabled=true;btn.textContent="ENVIANDO...";
+try{const r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});const j=await r.json();if(!j.ok)throw Error(j.error||"Falha");st.style.display="block";st.textContent="Candidatura enviada com sucesso! Guarde seu email para acompanhar o processo.";btn.textContent="CANDIDATURA ENVIADA";}catch(err){btn.disabled=false;btn.textContent="ENVIAR CANDIDATURA";alert("Não foi possível enviar agora. Verifique a conexão do formulário e tente novamente.");}});
+</script>
+</body></html>
